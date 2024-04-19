@@ -7,12 +7,13 @@
 /* Global styles */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-image: url(images/student.png);
+  background-image: url("../images/back.jpg"); /* Adjusted path based on file structure */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  opacity: 0.9; /* Consider removing this line temporarily */
 }
+
 .trx {
   background-color: black;
   width: 100%;
@@ -217,98 +218,18 @@ nav {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
-/* .video-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 95vh;
-  top: -260px;
-  position: relative;
-  padding-top: 3%;
-  margin: 1% 10% 70% 10%;
-}
-
-.video-container video {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-
-.text-container {
-  padding: 0 40px; 
-  top: 50%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.text-container h2 {
-  font-size: 36px;
-  color: #000000; 
-  margin-bottom: 10px;
-  margin-left: 30%;
-}
-
-.text-container p {
-  font-size: 24px;
-  color: #000000; 
-  margin-bottom: 10px;
-} */
-
-/* .video-container .text-container {
-  font-size: 50px;
-  line-height: 2.5;
-  width: 1200px;
-
-  text-underline-offset: right;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-shadow: 20px 20px 24px rgba(0, 0, 0, 0.5);
-  margin-left: 60%;
-  margin-top:  10%;
-} */
-
-/* .video-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 1300px;
-  margin: 1% 10% 70% 10%;
-}
-
-.video-container video {
-  max-width: 100%;
-}
-
-.text-container {
-}
-
-.text-container h2 {
-  font-size: 50px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-shadow: 20px 20px 24px rgba(0, 0, 0, 0.5);
-  color: #000000; 
-}
-
-.text-container p {
-  font-size: 24px;
-
-  color: #000000; 
-} */
 
 .video-text {
-  display: grid;
+  display: flex;
   padding: 2rem;
-  grid-template-columns: 1fr; /* تنظیم یک ستون برای نمایش ویدیو به تنهایی */
-  gap: 1rem;
+
   align-items: center;
-  font: 500 100%/1.5 system-ui;
 }
 
-video {
-  width: 100%; /* ویدیو پراپورشنال را تا ماکسیمم گسترش دهید */
-  height: 50%; /* ارتفاع به طور خودکار تغییر می‌کند تا نسبت معقولیت طولی حفظ شود */
-  max-width: 100%; /* تنظیم حداکثر عرض برابر با پنجره مشاهده */
-  margin: 1% 10 70% 10%; /* مرکز کردن ظاهر */
+/* video {
+    width: 100%; 
+    height: 1% auto;
+    max-width: 100%;  
 }
 
 @media (max-width: 650px) {
@@ -316,13 +237,51 @@ video {
     display: block;
     font-size: 80%;
   }
-  p,
-  h2 {
-    position: relative;
-    margin: 0.5rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.8); /* Adjusted background color */
-    grid-column: 2; /* Move h2 and p to the second column */
+}
+
+h2 {
+  font-size: 2rem; 
+  margin: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  grid-column: 2;
+}
+
+p {
+  font-size: 1.5rem; 
+  margin: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  grid-column: 10;
+   } */
+
+video {
+  max-width: 50%; /* Adjust as needed */
+  margin-left: 25rem;
+  border-radius: 10px;
+  /* Adjust spacing between video and text */
+}
+h2,
+p {
+  display: inline-flexbox;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 10%; /* Set margin to 4px */
+  padding: 0px;
+  font-size: 50px;
+}
+
+@media (max-width: 650px) {
+  .video-text {
+    flex-direction: column;
+  }
+
+  video {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding-top: 0;
   }
 }
 
