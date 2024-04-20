@@ -7,7 +7,7 @@
 /* Global styles */
 body {
   font-family: Arial, sans-serif;
-  background-image: url("../images/back.jpg"); /* Adjusted path based on file structure */
+  background-image: url("../images/trx38.jpg"); /* Adjusted path based on file structure */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -16,8 +16,9 @@ body {
 
 .trx {
   background-color: black;
-  width: 100%;
+  width: 120%;
   height: 6rem;
+  font-size: 30px;
 }
 
 nav {
@@ -219,69 +220,30 @@ nav {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.video-text {
-  display: flex;
-  padding: 2rem;
-
-  align-items: center;
-}
-
-/* video {
-    width: 100%; 
-    height: 1% auto;
-    max-width: 100%;  
-}
-
-@media (max-width: 650px) {
-  .video-text {
-    display: block;
-    font-size: 80%;
-  }
-}
-
-h2 {
-  font-size: 2rem; 
-  margin: 0.5rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.8);
-  grid-column: 2;
-}
-
-p {
-  font-size: 1.5rem; 
-  margin: 0.5rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.8);
-  grid-column: 10;
-   } */
-
-video {
-  max-width: 50%; /* Adjust as needed */
-  margin-left: 25rem;
-  border-radius: 10px;
-  /* Adjust spacing between video and text */
-}
 h2,
 p {
-  display: inline-flexbox;
+  display: inline-block;
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin: 10%; /* Set margin to 4px */
+  margin: 1%; /* کاهش فاصله بین جملات */
   padding: 0px;
-  font-size: 50px;
+  font-size: 60px;
+  width: fit-content;
+  text-shadow: 18px 18px 20px rgba(0, 0, 0, 0.5); /* مثال سایه افزوده شده */
 }
 
-@media (max-width: 650px) {
+@media (max-width: 500px) {
   .video-text {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   video {
-    max-width: 100%;
+    max-width: 80%;
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     padding-top: 0;
+    display: inline-block;
   }
 }
 
@@ -304,8 +266,9 @@ p {
 }
 
 .slide img {
-  width: 100%;
-  height: auto;
+  width: 30%;
+  height: 20px;
+  margin: auto;
 }
 
 .slide .caption {
@@ -314,15 +277,15 @@ p {
   left: 20px;
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  color: #030303;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
+  padding: 5%px 20px;
   border-radius: 5px;
 }
 
 /* Slide Colors */
 .slide.one {
-  background-color: #ff0000;
+  background-color: #000000;
 }
 .slide.two {
   background-color: #00ff00;
@@ -368,6 +331,7 @@ p {
 .slide img {
   width: 100%;
   height: 100%;
+  display: inline-block;
 }
 
 .slide .caption {
@@ -428,4 +392,45 @@ p {
   100% {
     transform: translateX(-400%);
   }
+}
+
+.video-text {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+
+video {
+  max-width: 50%;
+  margin-left: 25rem; /* تنظیم فاصله از پهنای صفحه (شما ممکن است نیازی به تغییر این مقدار داشته باشید) */
+  border-radius: 10px;
+}
+
+.welcome-section {
+  text-align: justify;
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+
+  border-radius: 5px;
+
+  font-size: 2px;
+  line-height: 1.3;
+}
+.welcome-section h1 {
+  font-size: 60px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  padding: 30px;
+  text-align: center;
+}
+
+/* برای فاصله آخرین خط با عکس پایین */
+.welcome-section img {
+  display: block;
+  margin-top: 50px; /* فاصله بالای عکس */
 }
