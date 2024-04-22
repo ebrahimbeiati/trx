@@ -218,218 +218,101 @@ nav {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-h2,
-p {
-  display: inline-block;
+h1 {
+  font-size: 2.2em;
+}
+h4 {
+  text-align: center;
+  display: flex;
   justify-content: center;
-  text-align: center;
   align-items: center;
-  margin: 1%; /* کاهش فاصله بین جملات */
-  padding: 0px;
-  font-size: 60px;
-  width: fit-content;
-  text-shadow: 18px 18px 20px rgba(0, 0, 0, 0.5); /* مثال سایه افزوده شده */
+  font-size: 50px;
 }
 
-@media (max-width: 500px) {
-  .video-text {
-    flex-direction: column-reverse;
-  }
-
-  video {
-    max-width: 80%;
-    margin-right: 0;
-    margin-bottom: 50px;
-    padding-top: 0;
-    display: inline-block;
-  }
-}
-
-.slider_container {
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
+.flip {
   position: relative;
+  margin-left: 15%;
+  margin-top: 7%;
+
+  > .front,
+  > .back {
+    display: block;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 0.5s;
+    transition-property: transform, opacity;
+  }
+  > .front {
+    transform: rotateY(0deg);
+  }
+  > .back {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+  }
+  &:hover {
+    > .front {
+      transform: rotateY(180deg);
+    }
+    > .back {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+  }
+  &.flip-vertical {
+    > .back {
+      transform: rotateX(-180deg);
+    }
+    &:hover {
+      > .front {
+        transform: rotateX(180deg);
+      }
+      > .back {
+        transform: rotateX(0deg);
+      }
+    }
+  }
 }
 
-.slider {
-  display: flex;
-  width: 500%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  flex: 0 0 20%;
+.flip {
   position: relative;
-}
-
-.slide img {
-  width: 30%;
-  height: 20px;
-  margin: auto;
-}
-
-.slide .caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #030303;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 5%px 20px;
-  border-radius: 5px;
-}
-
-/* Slide Colors */
-.slide.one {
-  background-color: #000000;
-}
-.slide.two {
-  background-color: #00ff00;
-}
-.slide.three {
-  background-color: #0000ff;
-}
-.slide.four {
-  background-color: #ffff00;
-}
-.slide.five {
-  background-color: #ff00ff;
-}
-
-.slider_container {
-  position: relative;
-  width: 60%;
-  min-width: 50rem;
-  height: 40rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
-}
-
-.slider {
-  position: relative;
-  width: 400%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  animation: 30s cubic-bezier(1, 0.95, 0.565, 1) sliding infinite;
-}
-
-.slide {
-  position: relative;
-  min-width: 100%;
-  height: 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.slide .caption {
-  position: absolute;
-  left: 0;
-  bottom: 5%;
-  font-size: 5rem;
-  font-weight: 600;
-  color: white;
-  text-transform: capitalize;
-  background: rgba(0, 0, 0, 0.348);
-  backdrop-filter: blur(10px);
-  padding: 1rem 5rem;
-  border-radius: 0 2rem 2rem 0;
-}
-
-.slide.one {
-  background: rgb(11, 173, 188);
-}
-.slide.two {
-  background: rgb(11, 173, 188);
-}
-.slide.three {
-  background: rgb(11, 173, 188);
-}
-.slide.four {
-  background: rgb(11, 173, 188);
-}
-.slide.five {
-  background: rgb(11, 173, 188);
-}
-
-@keyframes sliding {
-  0% {
-    transform: translateX(0%);
-  }
-  20% {
-    transform: translateX(0%);
-  }
-  25% {
-    transform: translateX(-100%);
-  }
-  45% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(-200%);
-  }
-  70% {
-    transform: translateX(-200%);
-  }
-  75% {
-    transform: translateX(-300%);
-  }
-  95% {
-    transform: translateX(-300%);
-  }
-  100% {
-    transform: translateX(-400%);
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 1em;
+  width: 400px;
+  > .front,
+  > .back {
+    display: block;
+    color: white;
+    width: inherit;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 220px;
+    padding: 1em 2em;
+    background: #313131;
+    border-radius: 10px;
+    p {
+      font-size: 0.9125rem;
+      line-height: 160%;
+      color: #999;
+    }
   }
 }
 
-.video-text {
-  display: flex;
-  padding: 20px;
-  align-items: center;
-}
-
-video {
-  max-width: 70%;
-  margin-left: 47rem; /* تنظیم فاصله از پهنای صفحه (شما ممکن است نیازی به تغییر این مقدار داشته باشید) */
-  border-radius: 10px;
-}
-
-.welcome-section {
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-
-  border-radius: 2px;
-
-  font-size: 2px;
-}
-.welcome-section h1 {
-  font-size: 60px;
-  color: #000;
-  text-align: center;
-}
-
-.welcome-section p {
-  padding: 2px;
-  text-align: center;
-  font-size: 35px;
-}
-
-/* برای فاصله آخرین خط با عکس پایین */
-.welcome-section img {
-  display: block;
-  margin-top: 50px; /* فاصله بالای عکس */
+.text-shadow {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04),
+    3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04),
+    0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04),
+    7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04),
+    9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04),
+    11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04),
+    13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04),
+    0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04),
+    17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04),
+    19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
 }
 
 footer {
