@@ -7,7 +7,7 @@
 /* Global styles */
 body {
   font-family: Arial, sans-serif;
-  background-image: url("../images/woman\ trx.jpg"); /* Adjusted path based on file structure */
+  background-image: url("../images/بندtrx.jpg"); /* Adjusted path based on file structure */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -90,8 +90,6 @@ nav {
 .nav-links li a:hover::before {
   width: 80%;
 }
-
-/*Styling Buttons*/
 
 .nav-buttons {
   display: flex;
@@ -219,14 +217,16 @@ nav {
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 2.3em;
+  color: yellow;
 }
 h4 {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 70px;
+  color: yellow;
 }
 
 .flip {
@@ -292,12 +292,12 @@ h4 {
     background-position: center !important;
     height: 220px;
     padding: 1em 2em;
-    background: #313131;
+    background: #000000;
     border-radius: 10px;
     p {
-      font-size: 0.9125rem;
+      font-size: 0.98rem;
       line-height: 160%;
-      color: #999;
+      color: white;
     }
   }
 }
@@ -317,82 +317,77 @@ h4 {
 
 footer {
   background-color: #000000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
 }
 .footerContainer {
   width: 100%;
   padding: 70px 20px 10px;
+  align-items: center;
 }
-.socialIcons {
+.footerSocial {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Horizontally center the icons */
+  align-items: center;
+  border-radius: 50%; /* Vertically center the icons */
 }
-.socialIcons a {
+
+.footerSocial a {
   text-decoration: none;
-  padding: 2px;
-  background-color: white;
-  margin: 2px;
-  border-radius: 25% 25%;
+  margin: 0 10px;
 }
-.socialIcons a i {
-  font-size: 2em;
-  color: black;
-  opacity: 0, 9;
+
+.footerSocial a i {
+  font-size: 30px;
+  padding: 5px 10px;
+  display: inline-flex;
+  align-items: center; /* Align the icon vertically within its container */
+  justify-content: center; /* Align the icon horizontally within its container */
 }
-/* Hover affect on social media icon */
-.socialIcons a:hover {
-  background-color: #111;
-  transition: 0.1s;
+
+.fa-facebook {
+  color: #3b5998;
 }
-.socialIcons a:hover i {
-  color: white;
-  transition: 0.5s;
+.fa-instagram {
+  color: #c32aa3;
 }
-.footerNav {
-  margin: 30px 0;
+.fa-twitter {
+  color: #1da1f2;
 }
+.fa-youtube {
+  color: #ff0000;
+}
+
 .footerNav ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
 }
+
 .footerNav ul li a {
   color: white;
-  margin: 20px;
   text-decoration: none;
-  font-size: 1.3em;
-  opacity: 0.7;
-  transition: 0.5s;
-}
-.footerNav ul li a:hover {
-  opacity: 1;
+  margin: 0 20px;
+  font-size: 1em;
 }
 .footerBottom {
-  background-color: #000;
-  padding: 20px;
   text-align: center;
 }
+
 .footerBottom p {
-  color: white;
-  font-size: large;
+  margin: 0; /* Remove default margin */
+  font-size: 14px; /* Adjust font size as needed */
 }
+
+.footerBottom .designer {
+  font-weight: bold;
+}
+
 .designer {
   opacity: 0.7;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 400;
-  margin: 0px 5px;
-}
-@media (max-width: 700px) {
-  .footerNav ul {
-    flex-direction: column;
-  }
-  .footerNav ul li {
-    width: 100%;
-    text-align: center;
-    margin: 10px;
-  }
-  .socialIcons a {
-    padding: 8px;
-    margin: 4px;
-  }
+  margin: 0 5px;
 }
