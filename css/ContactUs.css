@@ -218,79 +218,225 @@ nav {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.contact {
-  padding: 130px 0;
+/* Contact section styling */
+.container {
+  padding: 80px 0;
 }
 
-.contact .heading h2 {
-  font-size: 30px;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
+.heading h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.contact .heading h2 span {
-  color: #ff9100;
-}
-
-.contact .heading p {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #999999;
-  margin: 20px 0 60px;
-  padding: 0;
-}
-
-.contact .form-control {
-  padding: 25px;
-  font-size: 13px;
-  margin-bottom: 10px;
-  background: #f9f9f9;
-  border: 0;
-  border-radius: 10px;
-}
-
-.contact button.btn {
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 15px;
-  background: #ff9100;
-  color: #ffffff;
-}
-
-.contact .title h3 {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.contact .title p {
-  font-size: 14px;
-  font-weight: 400;
-  color: #999;
+.heading p {
+  font-size: 1.2rem;
+  color: #666;
   line-height: 1.6;
-  margin: 0 0 40px;
 }
 
-.contact .content .info {
-  margin-top: 30px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.contact .content .info i {
-  font-size: 30px;
-  padding: 0;
-  margin: 0;
-  color: #02434b;
-  margin-right: 20px;
+
+.col-md-5 {
+  flex: 0 0 50%; /* Take up 50% of the row width */
+  max-width: 50%;
+  padding: 0 20px;
+}
+
+.col-md-7 {
+  flex: 0 0 50%; /* Take up 50% of the row width */
+  max-width: 50%;
+  padding: 0 20px;
+}
+
+.title h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.title p {
+  font-size: 1.1rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+.info {
+  margin-bottom: 20px;
+}
+
+.info i {
+  font-size: 2rem;
+  color: #333;
+  margin-right: 10px;
+}
+
+.info h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info span {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Form styling */
+form {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media screen and (max-width: 992px) {
+  .col-md-5,
+  .col-md-7 {
+    flex: 0 0 100%; /* Take up 100% of the row width on smaller screens */
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading h2 {
+    font-size: 2rem;
+  }
+
+  .title h3 {
+    font-size: 1.5rem;
+  }
+
+  .info i {
+    font-size: 1.5rem;
+  }
+
+  .info h4 {
+    font-size: 1rem;
+  }
+
+  .info span {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form-control {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px;
   text-align: center;
-  width: 20px;
+  width: 100%;
 }
-.contact .content .info h4 {
-  font-size: 13px;
-  line-height: 1.4;
+.footerContainer {
+  width: 100%;
+  padding: 70px 20px 10px;
+  align-items: center;
+}
+.footerSocial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 
-.contact .content .info h4 span {
-  font-size: 13px;
-  font-weight: 300;
-  color: #999999;
+.footerSocial a {
+  text-decoration: none;
+  margin: 0 10px;
 }
+
+.footerSocial a i {
+  font-size: 30px;
+  padding: 5px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+.fa-instagram {
+  color: #c32aa3;
+}
+.fa-twitter {
+  color: #1da1f2;
+}
+.fa-youtube {
+  color: #ff0000;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNav ul li a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1em;
+}
+.footerBottom {
+  text-align: center;
+}
+
+.footerBottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footerBottom .designer {
+  font-weight: bold;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 5px;
+}
+
